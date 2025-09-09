@@ -28,4 +28,37 @@ with (
 );
 go
 
+truncate table bronze.erp_cust_az12;
+bulk insert bronze.erp_cust_az12
+from 'C:\Users\A654146\OneDrive - ATOS\Desktop\SQL DW\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
+with (
+      firstrow = 2,
+      fieldterminator = ',',
+      tablock
+);
+go
+
+
+truncate table bronze.erp_loc_a101;
+bulk insert bronze.erp_loc_a101
+from 'C:\Users\A654146\OneDrive - ATOS\Desktop\SQL DW\sql-data-warehouse-project\datasets\source_erp\LOC_A101.csv'
+with (
+      firstrow = 2,
+      fieldterminator = ',',
+      tablock
+);
+go
+
+
+truncate table bronze.erp_px_cat_g1v2;
+bulk insert bronze.erp_px_cat_g1v2
+from 'C:\Users\A654146\OneDrive - ATOS\Desktop\SQL DW\sql-data-warehouse-project\datasets\source_erp\PX_CAT_G1V2.csv'
+with (
+      firstrow = 2,
+      fieldterminator = ',',
+      tablock
+);
+go
+
+
 
