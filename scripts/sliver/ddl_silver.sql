@@ -1,3 +1,6 @@
+create or alter procedure silver.load_silver as
+begin
+
 truncate table silver.crm_cust_info
 insert into silver.crm_cust_info(cst_id,cst_key,cst_firstname,cst_lastname, cst_marital_status,cst_gndr,cst_create_date)
 select 
@@ -133,3 +136,4 @@ trim(CAT) as cat,
 trim(SUBCAT) as subcat,
 trim(MAINTENANCE) as MAINTENANCE
 FROM bronze.erp_px_cat_g1v2
+end
