@@ -16,6 +16,7 @@ If OBJECT_ID  ('silver.crm_prd_info','U')  is not null
     drop table silver.crm_prd_info;
 CREATE TABLE [silver].[crm_prd_info](
 	[prd_id] [int] NULL,
+	cat_id nvarchar(50),
 	[prd_key] [nvarchar](50) NULL,
 	[prd_nm] [nvarchar](50) NULL,
 	[prd_cost] [int] NULL,
