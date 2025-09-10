@@ -21,10 +21,11 @@ CREATE TABLE [silver].[crm_prd_info](
 	[prd_nm] [nvarchar](50) NULL,
 	[prd_cost] [int] NULL,
 	[prd_line] [nvarchar](50) NULL,
-	[prd_start_dt] [datetime] NULL,
-	[prd_end_dt] [datetime] NULL,
+	[prd_start_dt] [date] NULL,
+	[prd_end_dt] [date] NULL,
 	dwh_create_date datetime2 default getdate()
 )
+
 
 If OBJECT_ID  ('silver.crm_sales_details','U')  is not null
     drop table silver.crm_sales_details;
